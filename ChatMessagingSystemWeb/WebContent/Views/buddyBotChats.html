@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.5.0/sockjs.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.js"></script>
+<script src="js/botChatHome.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+<body>
+<body onload="disconnect();">
+	<div id="name_div_bot">
+		<input type="text" id="from_name_bot" placeholder="Choose a nickname"/>
+	</div><br/>
+	<div>
+	<button id="connect_bot" onclick="connect(this);">Connect</button>
+	<button id="disconnect_bot" onclick="disconnect(this);">Disconnect</button>
+	</div><br/><br/>
+	<div id="user_conversation_div_bot">
+	<input type="text" id="chat_text_bot" placeholder="write your message .."/>
+	<button id="send_chat_bot" onclick="sendChat(this);">Send</button>
+	</div>
+	<div id="chat_messages_user_bot">
+	<p id="user_chat_messages_bot"></p>
+	</div>
+</body>
+</html>

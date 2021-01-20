@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Chat</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.5.0/sockjs.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="js/chatHome.js"></script>
+</head>
+<body onload="disconnect();">
+	<div id="name_div">
+		<input type="text" id="from_name" placeholder="Choose a nickname"/>
+	</div><br/>
+	<div>
+	<button id="connect" onclick="connect(this);">Connect</button>
+	<button id="disconnect" onclick="disconnect(this);">Disconnect</button>
+	</div><br/><br/>
+	<div id="user_conversation_div">
+	<input type="text" id="chat_text" placeholder="write your message .."/>
+	<button id="send_chat" onclick="sendChat(this);">Send</button>
+	</div>
+	<div id="chat_messages_user">
+	<p id="user_chat_messages"></p>
+	</div>
+</body>
+</html>
